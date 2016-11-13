@@ -32,15 +32,5 @@ public class ConcatSample {
 
         System.out.println("---------------------------");
 
-        Observable.merge(obsA, obsB)
-                .subscribe(new Action1<Integer>() {
-                    @Override
-                    public void call(Integer integer) {
-                        System.out.println(integer);
-                    }
-                });
-
-
-
     }
 }
