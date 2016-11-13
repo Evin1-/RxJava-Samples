@@ -1,14 +1,7 @@
 package com.example.rxjavasamples;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
-import java.io.IOException;
-import java.net.Authenticator;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.PasswordAuthentication;
-import java.net.URL;
+import android.support.v7.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,5 +9,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSystemService(ACCESSIBILITY_SERVICE);
+        getSystemService(CAMERA_SERVICE);
     }
 }

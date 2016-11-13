@@ -8,8 +8,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 import rx.Observable;
-import rx.Subscriber;
-import rx.Subscription;
 import rx.functions.Action1;
 import rx.observables.ConnectableObservable;
 import rx.schedulers.Schedulers;
@@ -18,7 +16,7 @@ import rx.schedulers.Schedulers;
  * Created by jonathanhavstad on 10/5/16.
  */
 
-public class ListExample {
+public class ListSample {
     public static void main(String[] args) {
         Executor executor =
                 new ThreadPoolExecutor(5, 5, 200, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<Runnable>(10));
@@ -47,5 +45,6 @@ public class ListExample {
         }
         values.add(1);
         values.add(2);
-        observable.connect();    }
+        observable.connect();
+    }
 }
