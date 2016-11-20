@@ -10,18 +10,18 @@ import rx.functions.Func2;
 
 public class ZipSample {
     public static void main(String[] args) {
-        Observable<String> string1 = Observable.just("Hello", "World");
-        Observable<String> string2 = Observable.just("Bye", "Friends");
+        Observable<String> stringObservable1 = Observable.just("Hello", "World");
+        Observable<String> stringObservable2 = Observable.just("Bye", "Friends");
 
-        string1.zipWith(string2, new Func2<String, String, String>() {
+        Observable.zip(stringObservable1, stringObservable2, new Func2<String, String, String>() {
             @Override
             public String call(String s, String s2) {
-                return s + " " + s2;
+                return s + " - " + s2;
             }
         }).subscribe(new Action1<String>() {
             @Override
-            public void call(String o) {
-                System.out.println(o);
+            public void call(String s) {
+                System.out.println(s);
             }
         });
     }
